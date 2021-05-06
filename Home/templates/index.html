@@ -1,0 +1,528 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Reflux HTML CSS Template</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/templatemo-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/owl.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/lightbox.css' %}" />
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src= "{% static 'images/images (3).jpg' %}" %}alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4> Ugwu Noah</h4>
+              <span>Web Designer</span>
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="#section1">About Me</a></li>
+                <li><a href="#section2">What I’m good at</a></li>
+                <li><a href="#section3">My Work</a></li>
+                <li><a href="#section4">Contact Me</a></li>
+              </ul>
+            </nav>
+            <div class="social-network">
+              <ul class="soial-icons">
+                <li>
+                  <a href="https://fb.com/templatemo"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-rss"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright-text">
+              <p>Copyright 2020 UgwuNoah Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <section class="section about-me" data-section="section1">
+        <div class="container">
+          <div class="section-heading">
+
+
+            {% if sender_name %}
+                <center>
+                    <h3> Thanks {{ sender_name }} !</h3>
+                    <p> We got your message and will respond shortly...</p>
+                </center>
+                <div class="line-dec"></div>
+                <br/><br/><br/>
+            {% endif %}
+
+
+            <h2>About Me</h2>
+            <div class="line-dec"></div>
+            <span>We are a software development company with a track record of helping clients
+              bring their ideas into reality, we have experienced engineers with experience
+              in building software products for clients targeting multiple demographics.</span>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="{% static 'images/left-image3.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Approach</h4>
+                  <p>
+                    We don’t just take your order and serve you a web design or mobile app.
+                    Lounge Lizard’s website designers, website developers and mobile app developers
+                    take the time to get to know you and your market to create an all-encompassing
+                    digital marketing presence.
+                    This is how we have become one of the Best Website Design Companies in the World.
+                  </p>
+                  <div class="white-button">
+                    <a href="#">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Our Philosophy</h4>
+                  <p>
+                    Our New York Digital Marketing Agency is focused on delivering results for our clients.
+                    Whatever marketing goals you have – Brand Exposure, Lead Generation,
+                    Website Traffic – our team can help you reach your target audience and succeed.
+                    Lounge Lizard’s Digital Marketing Team specializes in Search Engine Optimization,
+                    Social Media, Pay-per-click, Influencer Marketing, and more!
+                  </p>
+                  <div class="white-button">
+                    <a href="#">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="{% static 'images/right-image3.jpg' %}" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section my-services" data-section="section2">
+        <div class="container">
+          <div class="section-heading">
+            <h2>What I’m good at?</h2>
+            <div class="line-dec"></div>
+            <span>We have helped build multiple projects for clients including
+              We and Mobile Applications,these are some of our works.
+            </span>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="first-service-icon service-icon"></div>
+                <h4>HTML5 &amp; CSS3</h4>
+                <p>
+                    {{ HTML5_CSS3.description }}
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="second-service-icon service-icon"></div>
+                <h4>Creative Ideas</h4>
+                <p>
+                  {{ creative_ideas.description }}
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="third-service-icon service-icon"></div>
+                <h4>Easy Customize</h4>
+                <p>
+                  {{ easy_customize.description }}
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="fourth-service-icon service-icon"></div>
+                <h4>Admin Dashboard</h4>
+                <p>
+                    {{ admin_dashboard.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- images displayed in this section are by dimension 570 width, 394 height -->
+      <section class="section my-work" data-section="section3">
+        <div class="container">
+          <div class="section-heading">
+            <h2>My Work</h2>
+            <div class="line-dec"></div>
+            <span>
+              We have helped build multiple projects for clients including
+              We and Mobile Applications,these are some of our works.
+            </span>
+          </div>
+          <div class="row">
+            <div class="isotope-wrapper">
+              <form class="isotope-toolbar">
+                <label
+                  ><input
+                    type="radio"
+                    data-type="*"
+                    checked=""
+                    name="isotope-filter"
+                  />
+                  <span>all</span> </label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="python"
+                    name="isotope-filter"
+                  />
+                  <span>python</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="django"
+                    name="isotope-filter"
+                  />
+                  <span>django</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="reactJs"
+                    name="isotope-filter"
+                  />
+                  <span>reactJs</span></label
+                >
+              </form>
+              <div class="isotope-box">
+                <div class="isotope-item" data-type="python">
+                  <figure class="snip1321">
+                    <img
+                      src="{{ first_title.image.url }}"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="{{ first_title.image.url }}"
+                        data-lightbox="image-1"
+                        data-title= "{{ first_title.caption }}"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>First Title</h4>
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="isotope-item" data-type="python">
+                  <figure class="snip1321">
+                    <img
+                      src="{{ second_title.image.url }}"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="{{ second_title.image.url }}"
+                        data-lightbox="image-1"
+                        data-title="{{ second_title.caption }}"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Second Title</h4>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="django">
+                  <figure class="snip1321">
+                    <img
+                      src="{{ item_third.image.url }}"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="{{ item_third.image.url }}"
+                        data-lightbox="image-1"
+                        data-title="{{ item_third.caption }}"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Item Third</h4>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="django">
+                  <figure class="snip1321">
+                    <img
+                      src="{{ item_forth.image.url }}"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="{{ item_forth.image.url }}"
+                        data-lightbox="image-1"
+                        data-title="{{ item_forth.caption }}"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Item Fourth</h4>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="reactJs">
+                  <figure class="snip1321">
+                    <img
+                      src="{{ fifth_awesome.image.url }}"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="{{ fifth_awesome.image.url }}"
+                        data-lightbox="image-1"
+                        data-title="{{ fifth_awesome.caption }}"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Fifth Awesome</h4>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="reactJs">
+                  <figure class="snip1321">
+                    <img
+                      src="{{ awesome_sixth.image.url }}"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="{{ awesome_sixth.image.url }}"
+                        data-lightbox="image-1"
+                        data-title="{{ awesome_sixth.caption }}"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Awesome Sixth</h4>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+
+      <section class="section contact-me" data-section="section4">
+        <div class="container">
+          <div class="section-heading">
+
+
+<!--
+            {% if sender_name %}
+            <center>
+              <h2> Thanks {{ sender_name }}!</h2>
+              <p> We got your message and will respond shortly...</p>
+            </center>
+            <br/><br/><br/>
+            {% endif %}
+-->
+
+
+
+            <h2>Contact Me</h2>
+            <div class="line-dec"></div>
+            <span>
+                    Your website is often your first chance to make a good impression. Even if
+                    you own a physical store, people will likely first look you up online before
+                    stepping into the store. That is why it is crucial to invest time and energy
+                    into creating an excellent website..
+            </span>
+          </div>
+          <div class="row">
+            <div class="right-content">
+              <div class="container">
+                <form id="contact" action="" method="post">
+                  {% csrf_token %}
+                  <div class="row">
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input
+                          name="name"
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Your name..."
+                          required=""
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input
+                          name="email"
+                          type="text"
+                          class="form-control"
+                          id="email"
+                          placeholder="Your email..."
+                          required=""
+                        />
+                      </fieldset>
+                    </div>
+                    <!--
+                    <div class="col-md-12">
+                      <fieldset>
+                        <input
+                          name="subject"
+                          type="text"
+                          class="form-control"
+                          id="subject"
+                          placeholder="Subject..."
+                          required=""
+                        />
+                      </fieldset>
+                    </div>
+                    -->
+                    <div class="col-md-12">
+                      <fieldset>
+                        <textarea
+                          name="message"
+                          rows="6"
+                          class="form-control"
+                          id="message"
+                          placeholder="Your message..."
+                          required=""
+                        ></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="button">
+                          Send Message
+                        </button>
+                      </fieldset>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="{% static 'js/isotope.min.js' %}"></script>
+    <script src="{% static 'js/owl-carousel.js' %}"></script>
+    <script src="{% static 'js/lightbox.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+  </body>
+</html>
